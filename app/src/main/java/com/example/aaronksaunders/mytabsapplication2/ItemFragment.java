@@ -69,6 +69,13 @@ public class ItemFragment extends Fragment implements AbsListView.OnItemClickLis
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        //
+        // Access to global variables
+        //
+        MyApplication app = (MyApplication) getActivity().getApplicationContext();
+        String globalString = app.getTest();
+
+
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
