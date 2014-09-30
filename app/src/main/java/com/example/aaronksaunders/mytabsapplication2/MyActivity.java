@@ -1,23 +1,24 @@
 package com.example.aaronksaunders.mytabsapplication2;
 
-import java.util.Locale;
-
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
+import android.content.Intent;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.os.Bundle;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.TextView;
+
+import java.util.Locale;
 
 import static com.example.aaronksaunders.mytabsapplication2.ItemFragment.OnFragmentInteractionListener;
 
@@ -80,6 +81,11 @@ public class MyActivity extends ActionBarActivity implements ActionBar.TabListen
     }
 
     public void onFragmentInteraction(String whatever) {
+        Intent intent = new Intent(this, MyDetailActivity.class);
+       // EditText editText = (EditText) findViewById(R.id.edit_message);
+       // String message = editText.getText().toString();
+       // intent.putExtra(EXTRA_MESSAGE, message);
+        startActivity(intent);
         return;
     }
 
